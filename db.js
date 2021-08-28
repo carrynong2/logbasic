@@ -1,5 +1,7 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/ahoy-node-passport', {
+const mongoose = require("mongoose");
+
+const MONGO_DB_URI = process.env.MONGO_URI;
+mongoose.connect(MONGO_DB_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
